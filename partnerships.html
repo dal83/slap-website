@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLAPP Service - SLAP</title>
+    <script src="header.js" defer></script>
+    <link rel="stylesheet" href="style.css">    
+    <style>
+       
+        .service-description {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .partner-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.5rem;
+        }
+
+        .partner {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .partner img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .partner h3 {
+            margin: 0;
+            font-size: 1.25rem;
+        }
+
+        .partner p {
+            margin: 0.5rem 0 0;
+            color: #555;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="header-container"></div>
+    <main class="container">
+        <h2>We find the best of the best</h2>
+        <h4>...so that you don't have to.</h4>
+        <div class="service-description">
+            <p> Whether you're looking to protect your reputation or silence a critic,
+                our network of experienced firms ensures you have the best chance of winning.</p>
+        </div>
+        <section>
+            <h2>Some of Our Partnering Law Firms</h2>
+            <div class="partner-list">
+                <!-- Partner 1 -->
+                <div class="partner">
+                    <img src="images/lawyer1.png" alt="Freedom & Justice LLP">
+                    <div>
+                        <h3>Freedom & Justice LLP</h3>
+                        <p>Experts in crafting powerful legal strategies for SLAPP suits, Freedom & Justice LLP has a proven track record of turning public criticism into favorable court outcomes for their clients.</p>
+                    </div>
+                </div>
+                <!-- Partner 2 -->
+                <div class="partner">
+                    <img src="images/lawyer2.png" alt="Brad">
+                    <div>
+                        <h3>Brad, Evan, & Rosen LLP</h3>
+                        <p>Known for their aggressive and pedantic approach, these litigious triplets represent clients who need to silence critics quickly and effectively through expertly managed SLAPP suits.</p>
+                    </div>
+                </div>
+                <!-- Partner 3 -->
+                <div class="partner">
+                    <img src="images/shieldhammer.png" alt="Shield & Hammer Attorneys">
+                    <div>
+                        <h3>Shield & Hammer Attorneys</h3>
+                        <p>Dedicated to protecting reputations, Shield & Hammer has extensive experience helping clients leverage SLAPP suits to their advantage in high-profile cases.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 SLAP. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slap</title>
+    <script src="header.js" defer></script>
+    <link rel="stylesheet" href="style.css">    
+    <style>
+
+        .statistics-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 2rem 0;
+            padding: 2rem;
+            background: #f9f9f9;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 70%; /* Reduced width to bring it closer to the center */
+            margin: 2rem 0;
+            gap: 2rem; /* Adds space between image and text */
+        }
+
+        .stat-item.middle {
+            flex-direction: row-reverse; /* Switch image to the right and text to the left for the middle item */
+        }
+
+        .stat-item.middle .stat-item-content {
+            text-align: right; /* Align text to the right for the middle item */
+        }
+
+        .stat-item img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .stat-item-content {
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        .stat-item-content h3 {
+            font-size: 2rem;
+            margin: 0.5rem 0;
+        }
+
+        .stat-item-content p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .divider {
+            width: 80%;
+            height: 1px;
+            background: #ddd;
+            margin: 2rem 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="header-container"></div>
+    <main class="container">
+        <h1>Welcome to Slap</h1>
+        <h3>Your gateway to trusted law firms.</h3>
+        <p>We bridge the gap between individuals seeking legal help and the best law firms. Explore our services and get connected to professionals who can help with your legal needs.</p>
+
+        <section class="statistics-section">
+            <div class="stat-item">
+                <img src="https://t3.ftcdn.net/jpg/06/44/95/72/360_F_644957260_ymnerVncVL06az9QKl2MtrdsakVwhpv5.jpg" alt="Stat 1">
+                <div class="stat-item-content">
+                    <h2>334.9+ million</h2>
+                    <p>potential Slap clients living in the United States</p>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="stat-item middle">
+                <img src="https://d1imjpjik7kc4g.cloudfront.net/images/The-One-Simple-Rule-for-Succeeding-in-a-Law-Firm-new.jpg" alt="Stat 2">
+                <div class="stat-item-content">
+                    <h2>92%</h2>
+                    <p>of our partnering firms are desperately seeking new clients</p>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="stat-item">
+                <img src="https://www.jgwentworth.com/wp-content/uploads/2024/06/Cash-Settlement.jpg.webp" alt="Stat 3">
+                <div class="stat-item-content">
+                    <h2>$20+ million</h2>
+                    <p>secured in settlements for our clients each year</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Slap. All rights reserved.</p>
+    </footer>
+</body>
+</html>

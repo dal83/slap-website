@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Case Evaluator - SLAP</title>
+    <script src="header.js" defer></script>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        .container {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .description {
+            text-align: left;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .description p {
+            margin-bottom: 1rem; 
+        }
+
+        ul {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            padding-left: 2rem; 
+        }
+
+        .example {
+            border-top: 1px solid #ddd;
+            margin-top: 2rem;
+            padding-top: 1rem;
+        }
+
+        .example p {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .progress-bar-container {
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-top: 1rem;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .progress-bar {
+            position: relative;
+            width: 100%;
+            height: 20px;
+            background: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar::before {
+            content: '';
+            display: block;
+            width: 82%;
+            height: 100%;
+            background: #4caf50;
+        }
+
+        .progress-bar-text {
+            margin-top: 0.5rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <main class="container">
+        <h2>AI Case Evaluator</h2>
+        <div class="description">
+            <p>At Slap, we understand the importance of knowing whether your suit stands a chance in court. That's why we've developed an AI-powered tool that evaluates your submitted case and provides an accurate percentage likelihood of success!</p>
+            <p>Our proprietary AI scans your submission for key winning factors, including:</p>
+            <ul>
+                <li>The volume of unnecessary legal jargon used</li>
+                <li>How much the case inconveniences the defendant</li>
+                <li>The dramatic flair of your accusations</li>
+                <li>Whether it includes phrases like "irreparable harm" or "gross negligence"</li>
+            </ul>
+        </div>
+        <section class="example">
+            <h2>How It Works: An Example</h2>
+            <p><strong>Submitted Case:</strong> "I want to sue my HOA for defamation because they sent an email to all the residents accusing me of overwatering my lawn. Now the neighbors are calling me 'Sprinkler Sally,' and I’ve lost social standing at block parties."</p>
+            <p><strong>AI Evaluation:</strong> The AI tool evaluates the evidence and context provided.</p>
+            <p><em>Result:</em> <strong>82% chance of success!</strong> (The AI notes that the nickname could be defamatory and that your HOA may be engaging in targeted harassment.)</p>
+            <div class="progress-bar"></div>
+            <div class="progress-bar-text">82% Success Probability</div>            
+       </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 SLAP. All rights reserved.</p>
+    </footer>
+</body>
+</html>

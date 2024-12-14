@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit a Case - Slap</title>
+    <script src="header.js" defer></script>
+    <link rel="stylesheet" href="style.css">    
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("wcPk6eecJwPeU61Mi"); // public key here
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('file-upload').addEventListener('change', function () {
+                const files = this.files;
+                const maxFileSize = 45 * 1024; // 50KB
+                for (let file of files) {
+                    if (file.size > maxFileSize) {
+                        alert(`The file ${file.name} exceeds the 50KB limit and will not be uploaded.`);
+                        this.value = '';
+                    }
+                }
+            });
+            document.getElementById('case-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                let gifContainer = document.createElement('div');
+                gifContainer.style.position = 'fixed';
+                gifContainer.style.top = '50%';
+                gifContainer.style.left = '50%';
+                gifContainer.style.transform = 'translate(-50%, -50%)';
+                gifContainer.style.zIndex = '9999';
+
+                const gif = document.createElement('img');
+                gif.src = 'https://media1.tenor.com/m/G4NmS0dSdwkAAAAd/cat-slap.gif';
+                gif.alt = 'Slap GIF';
+                gif.style.width = '200px'; // might wanna adjust size
+                gif.style.height = 'auto';
+
+                emailjs.sendForm('service_8dhr0rm', 'template_nq2ergr', this)
+                    .then(() => {
+                        alert('Your case has been submitted successfully!');
+                    }, (error) => {
+                        console.error('Failed to send case:', error);
+                        alert('Failed to send your case. Please try again later.');
+                    })
+                    .finally(() => {
+                        gifContainer.appendChild(gif);
+                        document.body.appendChild(gifContainer);
+                        setTimeout(() => {
+                            document.body.removeChild(gifContainer);
+                        }, 3000);
+                    });
+            });
+        };
+    </script>
+
+    <style>
+
+        .container {
+            padding: 2rem;
+            max-width: 500px;
+            margin: 0 auto;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+        }
+
+        form label {
+            display: block;
+            margin: 0.5rem 0 0.2rem;
+            font-weight: bold;
+        }
+
+        form input, form textarea, form button {
+            width: 100%;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ddd;
+        }
+
+        form button {
+            background: #333;
+            color: #fff;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background: #f4a261;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="header-container"></div>
+    <main class="container">
+        <h2>Submit a Case</h2>
+        <form id="case-form" enctype="multipart/form-data">
+            <input type="hidden" name="contact_number" value="case_001">
+        
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first_name" required>
+        
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last_name" required>
+        
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="case-details">Case Details</label>
+            <textarea id="case-details" name="case_details" rows="5" required></textarea>
+        
+            <label for="file-upload">Upload Supporting Files</label>
+            <input type="file" id="file-upload" name="photos" accept="image/*" multiple>
+        
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Slap. All rights reserved.</p>
+    </footer>
+</body>
+</html>
