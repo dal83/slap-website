@@ -1,6 +1,6 @@
 # **SLAP: Access Justice**
 
-Welcome to **SLAP**, a modern platform designed to empower individuals seeking legal representation and streamline case matching for law firms and attorneys. This website provides access to tools, case evaluations powered by AI, and subscription services for legal professionals.
+Welcome to **Slap**, a modern platform designed to empower individuals seeking legal representation and streamline case matching for law firms and attorneys. This website provides access to tools, case evaluations powered by AI, and subscription services for legal professionals.
 
 ---
 
@@ -15,7 +15,7 @@ Welcome to **SLAP**, a modern platform designed to empower individuals seeking l
 
 ## **Overview**
 
-SLAP is a client-facing website that:
+Slap is a client-facing website that:
 
 - Connects clients with top-tier law firms.
 - Offers AI-driven case evaluations.
