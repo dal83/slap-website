@@ -1,5 +1,7 @@
 # **SLAP: Access Justice**
 
+[Disclaimer: This is a final project for a college course — this is not a real company.]
+
 Welcome to **Slap**, a modern platform designed to empower individuals seeking legal representation and streamline case matching for law firms and attorneys. This website provides access to tools, case evaluations powered by AI, and subscription services for legal professionals.
 
 ---
